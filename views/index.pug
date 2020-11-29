@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= "Output three objects"
+  p 「#{theme} 」に関連したものを入力してください
+  form(method="post" action="/add")
+    input(type="text" name="ans1")
+    input(type="text" name="ans2")
+    input(type="text" name="ans3")
+    input(type="submit" name="送信")
+  
+  p #{ans1} #{ans2} #{ans3}
